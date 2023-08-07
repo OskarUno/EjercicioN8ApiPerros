@@ -2,7 +2,6 @@ package com.awakelab.oskar.ejercicion8apiperros
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-
 /*
 [X] Permiso de internet
 [X] Dependencias: Coil, Room, Retrofit, navigation, viewModel
