@@ -5,5 +5,5 @@ import retrofit2.http.GET
 
 interface RazaApi {
     @GET("breeds/list/all")
-    fun getData(): Response<RazaDataClass>
+    suspend fun getData(): Response<RazaDataClass>
 }
