@@ -20,7 +20,7 @@ abstract class RazaDataBase(): RoomDatabase() {
             }
             synchronized(this) {
                 val instance = Room.databaseBuilder(
-                    context.applicationContext, RazaDataBase::class.java, "tabla_raza"
+                    context.applicationContext, RazaDataBase::class.java, "raza_ddbb"
                 ).build()
 
                 INSTANCE = instance

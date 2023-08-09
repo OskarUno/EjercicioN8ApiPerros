@@ -10,10 +10,11 @@ import android.os.Bundle
         [X] Dataclass
         [X] API (interfaz)
         [X] Retrofit
-    [] Local:
-        [] Database
-        [] Entity
-        [] DAO
+    [x] Local:
+        [x] Database
+        [x] Entity
+        [x] DAO
+[] ViewModel
 [] 2 pantallas: Listado y detalle
 [] ViewBinding
 [] navigation

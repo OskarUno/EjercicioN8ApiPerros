@@ -2,7 +2,7 @@ package com.awakelab.oskar.ejercicion8apiperros.data.remote
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-
+//https://dog.ceo/api/
 class RazaRetrofit {
     companion object {
         private const val URL_BASE = "https://dog.ceo/api/"
