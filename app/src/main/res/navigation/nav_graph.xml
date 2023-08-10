@@ -9,5 +9,14 @@
         android:id="@+id/listadoRazasFragment"
         android:name="com.awakelab.oskar.ejercicion8apiperros.presentacion.ListadoRazasFragment"
         android:label="fragment_listado_razas"
-        tools:layout="@layout/fragment_listado_razas" />
+        tools:layout="@layout/fragment_listado_razas" >
+        <action
+            android:id="@+id/action_listadoRazasFragment_to_detalleFragment"
+            app:destination="@id/detalleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detalleFragment"
+        android:name="com.awakelab.oskar.ejercicion8apiperros.presentacion.DetalleFragment"
+        android:label="fragment_detalle"
+        tools:layout="@layout/fragment_detalle" />
 </navigation>
