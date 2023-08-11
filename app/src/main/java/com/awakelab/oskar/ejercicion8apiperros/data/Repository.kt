@@ -19,8 +19,9 @@ class Repository(
         if (res.isSuccessful) {                   //Consulta si llegan datos
             val message = res.body()!!.message  //Se extrae solo el mensaje
             val keys = message.keys
-            keys.forEach {
-                val razaEntity = RazaEntity(it)
+            keys.forEach { raza ->
+                val razaEntity = raza.toRazaEntiy()
+                //val razaEntity = RazaEntity(raza)
                 razaDao.insertRaza(razaEntity)
             }
         } else {
@@ -32,7 +33,8 @@ class Repository(
         val res = razaApi.getDetalleRaza(id)            //Datos desde la API
         if (res.isSuccessful) {                         //Consulta si llegan datos
             res.body()!!.message.forEach {
-                val razaDetalleEntity = DetalleEntity(id, it)
+                //val razaDetalleEntity = DetalleEntity(id, it)
+                val razaDetalleEntity = it.toEntity(id)
                 razaDao.insertDetalle(razaDetalleEntity)
             }
 
