@@ -14,6 +14,7 @@ private const val ARG_PARAM1 = "raza"
 class DetalleFragment : Fragment() {
     private lateinit var binding: FragmentDetalleBinding
     private var param1: String? = null
+
     private val razaVM: RazaViewModel by activityViewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,13 +30,20 @@ class DetalleFragment : Fragment() {
     ): View? {
         binding = FragmentDetalleBinding.inflate(layoutInflater, container, false)
         razaVM.getRazaVM(param1.toString())
-        binding.tvRazaDetalle.text = param1.toString()
+       // binding.tvRazaDetalle.text = param1.toString()
         initAdapter()
+        razaVM.getRazaVM(param1.toString())
         return binding.root
     }
 
     private fun initAdapter() {
-        val adapter = AdapterRazas()
+        val adapter = AdapterDetalle()
+        binding.rv.adapter = adapter
+        razaVM.detalleLiveData(param1.toString()).observe(viewLifecycleOwner){
+            adapter.setData(it)
+        }
+
+
 
     }
 
