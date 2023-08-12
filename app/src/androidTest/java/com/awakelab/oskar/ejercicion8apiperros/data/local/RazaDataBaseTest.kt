@@ -23,6 +23,7 @@ import java.util.concurrent.TimeoutException
     androidTestImplementation "androidx.arch.core:core-testing:2.2.0"
     androidTestImplementation "androidx.room:room-testing:2.5.2"
     androidTestImplementation 'androidx.test.ext:truth:1.5.0'
+
 */
 
 class RazaDataBaseTest {
