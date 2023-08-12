@@ -10,6 +10,11 @@ import androidx.room.Query
 interface RazaDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertRaza(razaEntity: RazaEntity)
+
+    //Para el test
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertRaza(razaEntity: List<RazaEntity>)
+
     @Query("select * from tabla_raza_detalle where razaDetalle like :id")
     fun getDetalleDao(id: String): LiveData<List<DetalleEntity>>
 

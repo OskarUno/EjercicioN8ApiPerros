@@ -75,6 +75,11 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 
+    //Test
+    androidTestImplementation "androidx.arch.core:core-testing:2.2.0"
+    androidTestImplementation "androidx.room:room-testing:2.5.2"
+    androidTestImplementation 'androidx.test.ext:truth:1.5.0'
+
     //Coil Imagenes
     implementation 'io.coil-kt:coil:2.4.0'
 }
