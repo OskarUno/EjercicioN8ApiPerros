@@ -1,9 +1,6 @@
 package com.awakelab.oskar.ejercicion8apiperros.data
 
-import com.awakelab.oskar.ejercicion8apiperros.data.local.DetalleEntity
-import org.junit.Assert
-import org.junit.Assert.*
-
+import org.junit.Assert.assertEquals
 import org.junit.Test
 
 class MapperTest {
@@ -14,6 +11,7 @@ class MapperTest {
         val url = "http://example.com"
         val id = "id"
 
+        //fun String.toEntity(id: String): DetalleEntity = DetalleEntity(id, this)
         //When (Hago esta acción)
         val res = url.toEntity(id)
 
@@ -27,6 +25,7 @@ class MapperTest {
         //Given (Dado este valor)
         val raza = "Esta es una Raza"
 
+        //fun String.toRazaEntiy(): RazaEntity = RazaEntity(this)
         //When (Hago esta acción)
         val res = raza.toRazaEntiy()
 

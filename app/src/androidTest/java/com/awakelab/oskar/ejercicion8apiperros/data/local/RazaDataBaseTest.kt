@@ -99,7 +99,7 @@ class RazaDataBaseTest {
     }
 }
 
-//Se crea un afuncion de extension,
+//Se crea una funcion de extension,
 @VisibleForTesting(otherwise = VisibleForTesting.NONE)
 fun <T> LiveData<T>.getOrAwaitValue(
     time: Long = 2,

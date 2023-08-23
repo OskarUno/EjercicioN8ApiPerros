@@ -21,8 +21,12 @@ android {
 
     buildTypes {
         release {
+            //Permite la reduccion de codigo, la ofuscarcion y la optimizacion
+            //Solo para el tipo de compilacion release
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            //buscar mas informacion build-variant
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'),
+                    'proguard-rules.pro'
         }
     }
     compileOptions {
@@ -83,3 +87,16 @@ dependencies {
     //Coil Imagenes
     implementation 'io.coil-kt:coil:2.4.0'
 }
+
+/*
+Para los que quieren cambiar su archivo apk1, colocar el siguiente código dentro de android.
+
+        applicationVariants.configureEach { variant ->
+    variant.outputs.configureEach {
+        def appName = "Escala de Notas"
+        outputFileName = "${appName}.apk"
+    }
+}
+
+
+ */

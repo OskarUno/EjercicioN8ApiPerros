@@ -19,8 +19,8 @@ class Repository(
         if (res.isSuccessful) {                   //Consulta si llegan datos
             val message = res.body()!!.message  //Se extrae solo el mensaje
             val keys = message.keys
-            keys.forEach { raza ->
-                val razaEntity = raza.toRazaEntiy()
+            keys.forEach {
+                val razaEntity = it.toRazaEntiy()
                 //val razaEntity = RazaEntity(raza)
                 razaDao.insertRaza(razaEntity)
             }
